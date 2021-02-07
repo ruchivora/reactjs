@@ -44,7 +44,7 @@ function Row( { title }){
 }
 
 What is a state ?
-  - State is a sort term memory. When we refresh it disappears. 
+  - State is a sort of temporary memory. When we refresh it disappears. 
     Good place to store some information. It is basically a way to write variables
     in react . 
 
@@ -62,3 +62,47 @@ Eg :
       const requests = {
           fetchTrending: `/top_rated?api_key=${API_KEY}&language=en-US&page=1`
       }
+
+Types of exports in reactjs 
+
+The export statement is used when creating JavaScript modules to export objects, 
+functions, variables from the module so they can be used by other programs with 
+the help of the import statements.There are two types of exports. One is Named 
+Exports and other is Default Exports.
+
+- Named Exports: Named exports are useful to export several values. 
+  During the import, it is mandatory to use the same name of the corresponding object.
+
+Eg: //file math.js 
+
+      function square(x) { 
+      return x * x; 
+      } 
+      function cube(x) { 
+      return x * x; 
+      } 
+      export { square, cube }; 
+
+
+      //while importing square function in test.js 
+      import { square, cube } from './math; 
+      console.log(square(8)) //64 
+      console.log(cube(8)) //512 
+
+- Default Exports: Default exports are useful to export only a single object, 
+  function, variable. During the import, we can use any name to import.
+ 
+  Eg: // file module.js 
+      var x=4; 
+      export default x; 
+
+      // test.js 
+      // while importing x in test.js 
+      import y from './module'; 
+      // note that y is used import x instead of 
+      // import x, because x was default export 
+      console.log(y);		 
+      // output will be 4 
+
+
+
