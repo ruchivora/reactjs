@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
+
 /* Here title, fetchURL are called as props */
 
 function Row( { title  , fetchURL }){
@@ -12,6 +13,7 @@ function Row( { title  , fetchURL }){
 
   /*
     What are we trying to achieve by useEffect ? 
+    - useEffect is a react hook to fetch data .
     Run a piece of code when the Row component loads on the screen . 
     So, when the row component loads , I basically want to make a request
     to the TMDB for the information based on the category .We get the
