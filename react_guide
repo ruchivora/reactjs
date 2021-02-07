@@ -1,0 +1,64 @@
+What is Axios ? 
+    - Axios is a package . 
+    - Used for : Instead of sending api request using postman
+      Axios is used .
+
+After adding a package , always do npm start . 
+Because when you install a package , the package.json file is updated.
+So, in order to update that we use "npm start"
+
+What does "npm start" do ?
+- So npm start runs the node script that is listed under start in the package.json.
+
+After installing a package , How to use that package ?
+- Once u install the package , that appears in package.json file
+- To use the package , we have to export that package in the file where we want to
+  use it.
+  Eg : If i install axios using " npm install axios " in package.json , you can find
+  axios . Now want to use axios , so you can use it by using " import axios from "axios"
+
+What is React Props ?
+- React Props are like function arguments in JavaScript and attributes in HTML.
+Eg: Here "title" is used as attribute in App.js and "title" is used as
+    function parameter in Row.js [Row.js is a component ]
+
+    function App() {
+      return (
+          <div className="App">
+              <h1> Hey clever programmer</h1>
+              <Row title="NETFLIX ORIGINALS"></Row>
+              <Row title="TRENDING NOW"> </Row>
+          </div>
+      );
+    }
+function Row( { title }){
+  return (
+          <div>
+            <h2>{ title }</h2>
+            {/* title */}
+
+            {/* container -> posters */}
+
+          </div>
+  )
+}
+
+What is a state ?
+  - State is a sort term memory. When we refresh it disappears. 
+    Good place to store some information. It is basically a way to write variables
+    in react . 
+
+what is template literal ?
+- Template literals are enclosed by the backtick (` `) (grave accent) character 
+  instead of double or single quotes. Template literals can contain placeholders. 
+  These are indicated by the dollar sign and curly braces (${expression}). 
+  The expressions in the placeholders and the text between the backticks (` `) 
+  get passed to a function. The default function just concatenates the parts into a single string. 
+  If there is an expression preceding the template literal (tag here), this is called a tagged template.
+
+Eg : 
+      const API_KEY = "3ada5264adeb01bb2e3c75995d4b245e"
+
+      const requests = {
+          fetchTrending: `/top_rated?api_key=${API_KEY}&language=en-US&page=1`
+      }
