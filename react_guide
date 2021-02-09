@@ -103,6 +103,7 @@ Eg: //file math.js
       // import x, because x was default export 
       console.log(y);		 
       // output will be 4 
+- Also , you can have only one export default in a file.
 
 
 
