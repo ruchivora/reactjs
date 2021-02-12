@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "./axios";
+import "./Row.css";
 
 const base_url = "https://image.tmdb.org/t/p/original/";
 
@@ -34,7 +35,6 @@ function Row({ title, fetchUrl }) {
     async function fetchData() {
       const request = await axios.get(fetchUrl);
       /* It is basically calling this : https://api.themoviedb.org/3/discover/tv?api_key=${API_KEY}...... */
-      console.log(request);
       /* sets the state variable movies with the data obtained by calling an API */
       setMovies(request.data.results);
       return request;
@@ -68,10 +68,11 @@ function Row({ title, fetchUrl }) {
         {/* several row__posters */}
         {movies.map((movie) => (
           <img
-            className=""
+            key={movie.id}
+            className="row__poster"
             src={`${base_url}${movie.poster_path}`}
             alt={movie.name}
-          ></img>
+          />
         ))}
       </div>
     </div>
