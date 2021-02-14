@@ -6,7 +6,7 @@ const base_url = "https://image.tmdb.org/t/p/original/";
 
 /* Here title, fetchURL are called as props */
 
-function Row({ title, fetchUrl }) {
+function Row({ title, fetchUrl, isLargeRow }) {
   /* This is a state , used to temporarily store data. 
      It disappears on refresh.
   */
@@ -69,8 +69,10 @@ function Row({ title, fetchUrl }) {
         {movies.map((movie) => (
           <img
             key={movie.id}
-            className="row__poster"
-            src={`${base_url}${movie.poster_path}`}
+            className={`row__poster ${isLargeRow && "row_posterLarge"} `}
+            src={`${base_url}${
+              isLargeRow ? movie.poster_path : movie.backdrop_path
+            }`}
             alt={movie.name}
           />
         ))}
