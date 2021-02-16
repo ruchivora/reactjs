@@ -10,7 +10,6 @@ function Row({ title, fetchUrl, isLargeRow }) {
   /* This is a state , used to temporarily store data. 
      It disappears on refresh.
   */
-
   const [movies, setMovies] = useState(
     []
   ); /* Use state sets default value of variable movies */

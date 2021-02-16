@@ -105,5 +105,10 @@ Eg: //file math.js
       // output will be 4 
 - Also , you can have only one export default in a file.
 
+In react if one class gets over another class and if both 
+classes contain some similar properties then properties of 
+second class gets applied .
+
+
 
 
